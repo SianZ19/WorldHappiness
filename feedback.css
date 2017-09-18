@@ -1,6 +1,6 @@
-body {
+#body {
 	font-family: "Open Sans", sans-serif;
-	
+
 	background-image: url("http://lolawho.com/wp-content/uploads/Pia-Riverola-1-Lola-Who-Photography-blog.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -14,107 +14,27 @@ section, aside, footer {
 	display: block;
 }
 
-#basic{
-  display:block;
-  height:300px;
-  width:700px;
-  position:absolute;
-  left:600px;
-  top:200px;
-}
-#he{
-  color:black;
-  font-size:17px;
-  background-color:#1B99EB;
-}
-
-#na{
-	list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1B99E8;
-}
-
-.nl {
-    float: left;
-}
-
-li a.active{
-	background-color: #666699;
-	color: white;
-}
-
-li a, .dropbtn  {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #1468A8;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #DAEDFF;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #DAEDFF}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 h1 {
 	display: block;
 	font-size: 44px;
-	padding: 20px;
+	padding: 50px;
 	text-align: center;
 }
 
-
-section legend {
-	display: block;
-	font-size: 30px;
-	padding: 20px 20px 20px 0px;
-}
 
 
 section .first {
 	background: rgba(255, 255, 255, 0.8);
-	margin: 30px 0px 0px 30px;
-	padding: 20px;
-	height: 600px;
-	width: 480px;
+	margin: 0px 0px 0px 30px;
+	padding: 0px 20px 20px 20px;
+	height: 800px;
+	width: 500px;
 }
 
-.search {
-	width: 250px;
-	padding: 5px;
-	border: none;
-	border: 1px solid black;
-	font-size: 17px;
-	text-align: center;
-	margin-top: 13px;
+.first > legend{
+	margin: 20px 20px 0px 50px;
+	padding-top: 80px;
 }
 
 .go {
@@ -125,4 +45,26 @@ section .first {
 	font-size: 17px;
 	text-align: center;
 	margin-top: 13px;
+}
+
+.footer{
+  font-family: 'Open Sans';
+  text-align: center;
+  height: 250px;
+  margin-top: -200px;
+}
+
+.footer p{
+  color: #000000;
+  text-align: center;
+  padding-top: 210px;
+  margin-bottom: 0px;
+  margin-left: 500px;
+  font-family: 'Open Sans';
+  height: 50px;
+  width: 400px;
+}
+
+.footer > p > a{
+  color: #000000;
 }

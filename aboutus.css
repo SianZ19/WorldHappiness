@@ -1,6 +1,6 @@
-body {
+#body {
 	font-family: "Open Sans", sans-serif;
-	
+
 	background-image: url("https://4.bp.blogspot.com/-11F0Lc7iOV0/VrzoCsSD3pI/AAAAAAAArU0/IrlNu-SUh0I/s1600/10733984_302352596620579_5479855090071893754_n.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -8,77 +8,6 @@ body {
 	z-index: 1;
 	background-color: rgba(255,255,255,0.5);
 	background-blend-mode: overlay;
-}
-
-
-#basic{
-  display:block;
-  height:300px;
-  width:700px;
-  position:absolute;
-  left:600px;
-  top:200px;
-}
-#he{
-  color:black;
-  font-size:17px;
-  background-color:#1B99EB;
-}
-
-#na{
-	list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1B99E8;
-}
-
-.nl {
-    float: left;
-}
-
-li a.active{
-	background-color: #666699;
-	color: white;
-}
-
-li a, .dropbtn  {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: #1468A8;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #DAEDFF;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #DAEDFF}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 
@@ -97,23 +26,40 @@ article {
 	text-align: center;
 }
 
-.search {
-	width: 250px;
-	padding: 5px;
-	border: none;
-	border: 1px solid black;
-	font-size: 17px;
+
+
+.first {
+	display: block;
 	text-align: center;
-	margin-top: 13px;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 100px 0px 0px 300px;
+	padding: 20px;
+	height: 500px;
+	width: 450px;
 }
 
-.go {
-	width: 50px;
-	padding: 5px;
-	border: none;
-	border: 1px solid black;
-	font-size: 17px;
-	text-align: center;
-	margin-top: 13px;
+section ul{
+	list-style-type: none;
 }
 
+.footer{
+  font-family: 'Open Sans';
+  text-align: center;
+  height: 250px;
+  margin-top: -100px;
+}
+
+.footer p{
+  color: #000000;
+  text-align: center;
+  padding-top: 210px;
+  margin-bottom: 0px;
+  margin-left: 500px;
+  font-family: 'Open Sans';
+  height: 50px;
+  width: 400px;
+}
+
+.footer > p > a{
+  color: #000000;
+}
