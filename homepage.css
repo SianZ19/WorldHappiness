@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans';
+    font-size: 40px;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 10px;
+}
+
+#welcomeword{
+  height: 550px;
+  text-align: center;
+  padding: 40px;
+  background: url(homepage_1.jpg) no-repeat;
+  background-size: cover;
+}
+
+#welcomeword .jumbotron{
+  border-radius: 20px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.75);
+  max-width: 400px;
+  min-height: 400px;
+  margin: 30px 80px;
+}
