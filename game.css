@@ -1,0 +1,26 @@
+#navigation{
+    background-color:#DAEDFF;
+}
+
+#body{
+  background-color: #E3F2FD;
+}
+
+
+.footer{
+  font-family: 'Open Sans';
+  text-align: center;
+  height: 250px;
+}
+
+.footer #footerrow{
+  color: #1b99e8;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: 'Open Sans';
+}
+
+.col-md-6{
+  color: #1b99e8;
+}
