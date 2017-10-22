@@ -103,9 +103,10 @@ h1 {
   margin-right: 270px;
 }
 
-#mainpart3 img{
+#mainpart3 iframe{
   margin-top: 20px;
-  width: 730px;
+  width: 650px;
+  height: 400px;
 }
 
 #mainpart4{
@@ -168,17 +169,15 @@ h1 {
   background-size: cover;
 }
 
-.footer p{
+.footer #footerrow{
   color: #DAEDFF;
   text-align: center;
-  padding-top: 210px;
-  margin-bottom: 0px;
-  margin-left: 500px;
+  padding-top: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
   font-family: 'Open Sans';
-  height: 50px;
-  width: 400px;
 }
 
-.footer > p > a{
+.col-md-6{
   color: #DAEDFF;
 }
