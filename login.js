@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",function() {
     if (password.length == 0) {
       window.alert("Password can not be empty!");
     }
-    
+
     if ((username.length != 0) && (email.length != 0) && (password1.length != 0) && (password1 === password1)) {
       //set storage
       localStorage.setItem(index,username);
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded",function() {
       localStorage.setItem(username,password);
 
       //Get storage in order to display to user
-      document.getElementById("response").innerHTML = "<p>Congrats " + localStorage.getItem(index) + "! Successfully registered<p>";
+      document.getElementById("response").innerHTML = "<p>Congrats " + localStorage.getItem(index) + "! You have successfully registered<p>";
 
     }
 

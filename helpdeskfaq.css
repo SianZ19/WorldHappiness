@@ -20,6 +20,15 @@ section{
 	margin: 50px 200px 30px 200px;
 }
 
+.question{
+
+}
+
+.answer{
+	margin-top: 20px;
+	margin-left: 35px;
+	margin-right: 25px;
+}
 
 .go {
 	width: 50px;
