@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset ="utf-8">
+        <title>pong</title>
+    </head>
+    <body>
+      <script>
+var canvas;
+var ctx;
+var keyboard;
+var player;
+var ai;
+var ball;
+var background = new Image();
+var aiImage = new Image();
+player ={
+  x: null,
+  y:null,
+
+width:20,
+height:100,
+  update:function(){
+    if(keyboard[38]) this.y-=7;
+    if(keyboard[40]) this.y+= 7;
+    this.y = Math.max(Math.min(this.y, 650 - this.height),0);
+  },
+  draw:function(){
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  }
+};
+
+ai ={
+  x: null,
+  y:null,
+  width:20,
+  height:100,
+
+  update:function(){
+    var b = ball.y - (this.height - ball.side) * 0.5;
+    this.y += (b - this.y) * 0.1;
+    this.y = Math.max(Math.min(this.y, 650 - this.height),0);
+  },
+  draw:function(){
+
+  aiImage.onload = function(){
+    ctx.drawImage(aiImage,0,0);
+  };
+  aiImage.src='ai.png';
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  }
+};
+
+ball ={
+  x: null,
+  y:null,
+  vel:null,
+  side:20,
+  speed:12,
+
+  extra: function(side){
+    var r = Math.random();
+    this.x = side === 1 ? player.x+player.width : ai.x - this.side;
+    this.y = (650 - this.side)*r;
+
+    var p = 0.1*Math.PI*(1-2*r);
+    this.vel = {
+      x: side*this.speed*Math.cos(p),
+      y: this.speed*Math.sin(p)
+    }
+  },
+  update:function(){
+    this.x += this.vel.x;
+    this.y += this.vel.y;
+
+    if(0>this.y||this.y+this.side>650){
+      var offset = this.vel.y< 0 ? 0 -this.y : 650 - (this.y+this.side);
+      this.y+=2*offset;
+      this.vel.y *=-1;
+    }
+    var collide = function(ax,ay,aw,ah,bx,by,bw,bh){
+      return ax < bx+bw&&ay<by+bh&& bx < ax+aw && by < ay+ah;
+    };
+
+    var paddle = this.vel.x<0?player : ai;
+    if(collide(paddle.x, paddle.y,paddle.width, paddle.height,
+    this.x,this.y,this.side,this.side)){
+      this.x = paddle ===player ? player.x+player.width : ai.x -this.side;
+      var n = (this.y+this.side - paddle.y)/(paddle.height+this.side);
+      var phi = 0.25*Math.PI*(2*n - 1);
+
+      var smash = Math.abs(phi) > 0.2*Math.Pi ? 1.5:1;
+      this.vel.x = smash*(paddle===player ? 1 : -1)*this.speed*Math.cos(phi);
+      this.vel.y = smash*this.speed*Math.sin(phi);
+    }
+
+    if( 0 > this.x + this.side || this.x > 800){
+        this.extra(paddle===player ? 1 : -1);
+    }
+  },
+  draw:function(){
+    ctx.fillRect(this.x, this.y, this.side, this.side);
+  }
+};
+
+function main(){
+  canvas = document.createElement("canvas");
+  canvas.width=800;
+  canvas.height=650;
+  ctx = canvas.getContext("2d");
+  background.src="main.jpg";
+  background.onload = function(){
+    ctx.drawImage(background,0,0);
+  }
+  document.body.style.backgroundImage = "url('image/main.jpg')";
+  document.body.appendChild(canvas);
+
+  keyboard = {};
+  document.addEventListener("keydown",function(evt){
+    keyboard[evt.keyCode]=true;
+  });
+  document.addEventListener("keyup",function(evt){
+    delete keyboard[evt.keyCode];
+  })
+
+  init();
+
+  var loop = function(){
+    update();
+    draw();
+
+    window.requestAnimationFrame(loop,canvas);
+  };
+  window.requestAnimationFrame(loop,canvas);
+}
+
+function myFunction() {
+    var t = document.createTextNode("Hello World");
+    document.body.appendChild(t);
+}
+
+function init(){
+  player.x = player.width;
+  player.y =(650 - player.height)/2;
+
+  ai.x = 800 - (player.width + ai.width);
+  ai.y = (650-ai.height)/2;
+
+ball.extra(1);
+}
+
+function update(){
+  ball.update();
+  player.update();
+  ai.update();
+}
+
+function draw(){
+
+  ctx.fillRect(0,0,800,650);
+
+ ctx.save();
+  ctx.fillStyle = "#fff";
+
+  ball.draw();
+  player.draw();
+  ai.draw();
+
+  var w =4;
+  var x =(800 - w)*0.5;
+  var y = 0;
+  var step = 130/3;
+  while(y<650){
+    ctx.fillRect(x,y+step*0.25,w,step*0.5);
+    y+=step;
+  }
+
+  ctx.font = "30px Arial";
+ctx.fillText("Use up arrow and down arrow to control the paddle",10,50);
+  ctx.restore();
+}
+
+main();
+      </script>
+
+    </body>
+</html>
