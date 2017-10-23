@@ -1,6 +1,6 @@
 
 section{
-  margin: 50px 100px 30px 100px;
+  margin: 50px 250px 30px 250px;
 }
 
 #navigation{
@@ -12,6 +12,12 @@ section{
   font-family: 'Open Sans';
 }
 
+blockquote{
+  padding: 15px;
+  border-style: outset;
+  border-width: 5px;
+  border-color: brown;
+}
 
 .footer{
   font-family: 'Open Sans';
