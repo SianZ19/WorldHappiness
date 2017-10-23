@@ -7,6 +7,23 @@
   font-family: 'Open Sans';
 }
 
+#quizcontent{
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#submit{
+  margin-left: 290px;
+}
+
+#reference{
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
 
 .footer{
   font-family: 'Open Sans';

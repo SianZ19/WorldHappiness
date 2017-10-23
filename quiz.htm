@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="quiz.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <script src="https://use.fontawesome.com/06dc53cef4.js"></script>
+  <script src="quiz.js"></script>
 </head>
 
 <body id="body">
@@ -74,7 +75,178 @@
       </nav>
     </header>
 
-    <div class='game'>
+    <div class=“container” id="quizcontent">
+      <div id="Instructions">
+        <h3 class="font-weight-bold text-center">Instructions</h3>
+        <br>
+        <p class="text-justify">Below are a number of statements about happiness. Please indicate how much you agree or disagree with each by entering a number in the blank after each statement, according to the following scale:</p>
+        <p>
+          1 = strongly disagree
+          <br>
+          2 = moderately disagree
+          <br>
+          3 = slightly disagree
+          <br>
+          4 = slightly agree
+          <br>
+          5 = moderately agree
+          <br>
+          6 = strongly agree
+        </p>
+        <p class="text-justify">Please read the statements carefully, because some are phrased positively and others negatively. Don’t take too long over individual questions; there are no “right” or “wrong” answers (and no trick questions). The first answer that comes into your head is probably the right one for you. If you find some of the questions difficult, please give the answer that is true for you in general or for most of the time.</p>
+      </div>
+      <div id="Questionnaire">
+        <h3 class="font-weight-bold text-center">Questionnaire</h3>
+        <br>
+        <form class="form-horizontal" role="form">
+          <div class="form-group form-inline">
+            <label for="input1" class ="control-label">1. I don’t feel particularly pleased with the way I am. </label>
+            <input type="number" min="1" max="6" id="input1" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input2" class="control-label">2. I am intensely interested in other people. </label>
+            <input type="number" min="1" max="6" id="input2" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input3" class="control-label">3. I feel that life is very rewarding. </label>
+            <input type="number" min="1" max="6" id="input3" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input4" class="control-label">4. I have very warm feelings towards almost everyone. </label>
+            <input type="number" min="1" max="6" id="input4" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input5" class="control-label">5. I rarely wake up feeling rested. </label>
+            <input type="number" min="1" max="6" id="input5" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input6" class="control-label">6. I am not particularly optimistic about the future. </label>
+            <input type="number" min="1" max="6" id="input6" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input7" class="control-label">7. I find most things amusing. </label>
+            <input type="number" min="1" max="6" id="input7" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input8" class="control-label">8. I am always committed and involved. </label>
+            <input type="number" min="1" max="6" id="input8" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input9" class="control-label">9. Life is good. </label>
+            <input type="number" min="1" max="6" id="input9" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input10" class="control-label">10. I do not think that the world is a good place. </label>
+            <input type="number" min="1" max="6" id="input10" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input11" class="control-label">11. I laugh a lot. </label>
+            <input type="number" min="1" max="6" id="input11" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input12" class="control-label">12. I am well satisfied about everything in my life. </label>
+            <input type="number" min="1" max="6" id="input12" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input13" class="control-label">13. I don’t think I look attractive. </label>
+            <input type="number" min="1" max="6" id="input13" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input14" class="control-label">14. There is a gap between what I would like to do and what I have done. </label>
+            <input type="number" min="1" max="6" id="input14" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input15" class="control-label">15. I am very happy. </label>
+            <input type="number" min="1" max="6" id="input15" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input16" class="control-label">16. I find beauty in some things. </label>
+            <input type="number" min="1" max="6" id="input16" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input17" class="control-label">17. I always have a cheerful effect on others. </label>
+            <input type="number" min="1" max="6" id="input17" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input18" class="control-label">18. I can fit in (find time for) everything I want to. </label>
+            <input type="number" min="1" max="6" id="input18" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input19" class="control-label">19. I feel that I am not especially in control of my life. </label>
+            <input type="number" min="1" max="6" id="input19" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input20" class="control-label">20. I feel able to take anything on. </label>
+            <input type="number" min="1" max="6" id="input20" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input21" class="control-label">21. I feel fully mentally alert. </label>
+            <input type="number" min="1" max="6" id="input21" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input22" class="control-label">22. I often experience joy and elation. </label>
+            <input type="number" min="1" max="6" id="input22" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input23" class="control-label">23. I don’t find it easy to make decisions. </label>
+            <input type="number" min="1" max="6" id="input23" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input24" class="control-label">24. I don’t have a particular sense of meaning and purpose in my life. </label>
+            <input type="number" min="1" max="6" id="input24" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input25" class="control-label">25. I feel I have a great deal of energy. </label>
+            <input type="number" min="1" max="6" id="input25" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input26" class="control-label">26. I usually have a good influence on events. </label>
+            <input type="number" min="1" max="6" id="input26" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input27" class="control-label">27. I don’t have fun with other people. </label>
+            <input type="number" min="1" max="6" id="input27" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input28" class="control-label">28. I don’t feel particularly healthy. </label>
+            <input type="number" min="1" max="6" id="input28" class="mx-sm-2">
+          </div>
+          <div class="form-group form-inline">
+            <label for="input29" class="control-label">29. I don’t have particularly happy memories of the past. </label>
+            <input type="number" min="1" max="6" id="input29" class="mx-sm-2">
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10">
+              <br>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultModal" id="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultModalLabel"> </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="explainresult"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="reference">
+      <h6>Reference</h6>
+      <br>
+      <p>Hills, P., & Argyle, M. (2002). The Oxford Happiness Questionnaire: a compact scale for the measurement of psychological well-being. Personality and Individual Differences, 33, 1073–1082.</p>
     </div>
 
     <div class="footer">
